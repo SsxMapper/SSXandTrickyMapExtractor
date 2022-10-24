@@ -12,8 +12,8 @@ Copy the contents of the PS2 games discs:
 Run main.py to convert all DVDs, takes about 8 mins on my computer.
 
 Output will be in the output_files directory. These directories contain obj files that can be imported into Blender using File/Import/Wavefront (.obj):
-output_files\SSX\curved patch beizer
-output_files\SSX Tricky\curved patch beizer
+- output_files\SSX\curved patch beizer
+- output_files\SSX Tricky\curved patch beizer
 
 The 'csv files' directory in output_files contains exports of some data which can be loaded in excel.
 The converted game files are in dvdmodelfiles directory. The ssh files which contain images can be loaded using https://github.com/bartlomiejduda/EA-Graphics-Manager
