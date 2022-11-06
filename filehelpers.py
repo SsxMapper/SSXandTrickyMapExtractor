@@ -14,10 +14,32 @@ class Unpacker:
         self._index+=1
         return byteRead[0]
 
+    def ReadUint16(self):
+        byte1 = self.ReadByte()
+        byte2 = self.ReadByte()
+        uint16 = byte1 + (byte2 << 8)
+        return uint16
+
+    def ReadUint24(self):
+        byte1 = self.ReadByte()
+        byte2 = self.ReadByte()
+        byte3 = self.ReadByte()
+        uint24 = byte1 + (byte2 << 8) + (byte3 << 16) 
+        return uint24
+
     def ReadUint32(self):
         uint32Read = struct.unpack('<L',self._dataFile[self._index:self._index+4])
         self._index+=4
         return uint32Read[0]
+
+
+    def ReadMagicWord(self):
+        idString = ""
+        idString += chr(self.ReadByte())
+        idString += chr(self.ReadByte())
+        idString += chr(self.ReadByte())
+        idString += chr(self.ReadByte())
+        return idString
 
     # unpacking files needs some big endian reading
 
