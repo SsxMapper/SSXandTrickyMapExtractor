@@ -409,7 +409,7 @@ def CreateLightmapAdjustedTexture(dirNameTextures, dirNameLightMaps, dirNameLigh
 
     saveFileName = f"LitTexture_{patchIndex:04d}.png"
     SaveImageToDir(dirNameLightMapsComputed, saveFileName, finalImage)
-    debugPatches =True
+    debugPatches =False
     if debugPatches:
         fileCurvedPatchCsvDir = '.\\output_files\\SSX Tricky\\csv files\\'
         Path(fileCurvedPatchCsvDir).mkdir(parents=True, exist_ok=True)
