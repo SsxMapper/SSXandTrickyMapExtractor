@@ -228,8 +228,8 @@ def ResizeTextureAccordingToMappingUVBounds(imgTexture,
         yDirectionNumTiles =  1
     elif  (boundsType==25):
         rotateImage = True
-        doFlipXAxis = True
-        doFlipYAxis = True
+        doFlipXAxis = False
+        doFlipYAxis = True  
         xDirectionNumTiles =  1
         yDirectionNumTiles =  1
     elif  (boundsType==26):
@@ -284,13 +284,16 @@ def ResizeTextureAccordingToMappingUVBounds(imgTexture,
     # Test
     # if xDirectionNumTiles > 5 or yDirectionNumTiles > 6:
     #     #ShowImageAndWaitForKey(tileImg, "tile Img", True)   
-    #     ShowImageAndWaitForKey(finalImage, "tile Img", True)   
-    # cv2.putText(finalImage, #target image
-    #             f"{boundsType}", #text
-    #             (24, 24), #top-left position
-    #             cv2.FONT_HERSHEY_DUPLEX,
-    #             1.0,
-    #             (255, 255, 0),  2) #font color
+    #     ShowImageAndWaitForKey(finalImage, "tile Img", True)  
+    # draw the patch number on the patch for testing
+    showPatchNumber = False
+    if (showPatchNumber):
+        cv2.putText(finalImage, #target image
+                    f"{boundsType}", #text
+                    (24, 24), #top-left position
+                    cv2.FONT_HERSHEY_DUPLEX,
+                    1.0,
+                    (255, 255, 0),  2) #font color
     #PrintElapsedTime(start) 
 
 
