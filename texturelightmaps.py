@@ -187,11 +187,6 @@ def ResizeTextureAccordingToMappingUVBounds(imgTexture,
         endDestYPos = texture3xp
 
     
-    #textureMappingDirection = ((texture1xpTo2xpDirectionYDirection, texture1xpTo3xpDirectionYDirection), (DestXIncrement,DestYIncrement), (mirroredX, mirroredY))
-    # I was using textureMappingDirection to also flip the lightmap but then I found that the lightmap is not ever flipped, 
-    # it is applied as is with no transformation other than scaling to the texture after the texture is flipped (if it is)
-    #return (newImageTexture, textureMappingDirection)
-
     flipVertical = 0
     # flip the texture - not sure why, seems to work, matches sign of texture co-ordinate maybe
     imgTexture = cv2.flip(imgTexture, flipVertical)
